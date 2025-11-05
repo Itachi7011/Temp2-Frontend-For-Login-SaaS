@@ -25,13 +25,7 @@ function App({ auth }) {
 
   return (
     <>
-
-      <AuthComponent
-        options={{ debug: NODE_ENV === 'development' }}
-        onAuthSuccess={handleAuthSuccess}
-        onAuthFailure={handleAuthFailure}
-      >
-
+      
         <Router>
           <Routes>
             <Route path="/" element={<Home auth={auth} />} />
@@ -39,7 +33,6 @@ function App({ auth }) {
 
           </Routes>
         </Router>
-      </AuthComponent>
 
     </>
   )
